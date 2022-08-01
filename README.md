@@ -1,1 +1,1 @@
-# productivity-app
+# A full-stack MERN productivity-app
