@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 const App = () => {
-
+  
   const [activities, setActivities] = useState([]);
 
    /* Fetching the data from the backend and setting the state of activities to the data. */
@@ -33,11 +33,11 @@ const App = () => {
   )}
   </main>
 
-  /* New constat to connect the front to back */
+  /* New constant to connect the front to back */
   const cors = require("cors");
 
   /* Allowing the frontend to access the backend. */
-  //app.use(cors());
+  App.use(cors());
 
   /* New function to create a submit element */
   function handleSubmit() {
