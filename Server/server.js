@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const core = require("core");
+const cors = require("cors");
 
 const ActivityRouter = require("./routes/activity.route");
 
@@ -15,6 +15,7 @@ app.use("/api", ActivityRouter);
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/todoapiDB";
 
+app.use(cors());
     /* Telling the application to use the express.json() middleware. This middleware will parse the body of
 any request that has a Content-Type of application/json. */
 app.use(express.json());
