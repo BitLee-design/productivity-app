@@ -1,15 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
-const app = express();
+const core = require("core");
 
 const ActivityRouter = require("./routes/activity.route");
 
-/* Telling the application to use the ActivityRouter for any requests that start with "/api". */
-app.use("/api", ActivityRouter);
+const app = express();
 
 /* Loading the environment variables from the .env file. */
 require("dotenv").config();
+
+/* Telling the application to use the ActivityRouter for any requests that start with "/api". */
+app.use("/api", ActivityRouter);
 
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/todoapiDB";
