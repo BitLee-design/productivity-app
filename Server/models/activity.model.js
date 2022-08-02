@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import { Schema as _Schema, model } from "mongoose";
 
-const Schema = mongoose.Schema;
+const Schema = _Schema;
 
 /* Creating a new schema for the activity model. */
 const activitySchema = new Schema({
@@ -14,4 +14,4 @@ const activitySchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Activity", activitySchema);
+export default model("Activity", activitySchema);

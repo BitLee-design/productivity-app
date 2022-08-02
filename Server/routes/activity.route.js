@@ -1,15 +1,12 @@
-const express = require("express");
+import { Router } from "express";
 
-const {
-  getActivities,
-  addActivity,
-} = require("../controllers/activity.controller");
+import { getActivities, addActivity } from "../controllers/activity.controller";
 
-const router = express.Router();
+const router = Router();
 
 /* Creating a route for the get request. */
 router.get("/activities", getActivities);
 /* Creating a route for the post request. */
 router.post("/activity", addActivity);
 
-module.exports = router;
+export default router;
